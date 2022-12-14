@@ -16,6 +16,7 @@ public class Animal { // Расширяет класс Object.
     }
     @Override // Это аннотация (Добавляет возможности в метод).
     public String toString () { // Метод возвращает строку.
-        return "Привет, меня зовут " + name + ".";
+        String postfix = type == AnimalTypes.HERBIVORES ? "herbivore" : "predator"; // Тернарнарный оператор.
+        return "Hello, my name is " + name + ". I'am a " + postfix + ".";
     }
 }
