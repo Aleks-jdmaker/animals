@@ -19,4 +19,12 @@ public class Animal { // Расширяет класс Object.
         String postfix = type == AnimalTypes.HERBIVORES ? "herbivore" : "predator"; // Тернарнарный оператор.
         return "Hello, my name is " + name + ". I'am a " + postfix + ".";
     }
+    public static Animal createRandomAnimal() {
+        double r = Math.random();
+        if (r < 0.25) return new Sheep("Dolly" + r);
+        if (r < 0.5) return new Crocodile("Gena" + r);
+        if (r < 0.75) return new Bulldog("Spike" + r);
+        return new Labrador("Patrik" + r);
+    }
+
 }
