@@ -4,7 +4,7 @@ import java.util.List; // Список объектов. Это интерфей
 import java.util.ArrayList; // Реализация списка. Можно создавать экземпляры (инстансы).
 
 public class Main {
-        private static final int ANIMAL_COUNT = 10;
+        private static final int ANIMAL_COUNT = 10; // Константа с количеством животных на проверку.
     private static final List<Predator> predatorCage = new ArrayList(); // Клетка с хищниками.
     // <Predator> - дженерик (generic), допустимый тип для данного листа.
     private static final List<Herbivore> herbivoreCage = new ArrayList(); // Клетка с травоядными.
