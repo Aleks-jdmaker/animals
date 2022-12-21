@@ -10,7 +10,7 @@ public class Main {
     private static final List<Herbivore> herbivoreCage = new ArrayList(); // Клетка с травоядными.
     private static final List<Animal> animals = new ArrayList(); // Исходный список животных
     // (как хищников, так и травоядных).
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException {
         for (int i = 0; i < ANIMAL_COUNT; i++) animals.add(Animal.createRandomAnimal()); /* Создаём несколько животных
         со случайным типом. */
         for (Animal animal : animals) { // Итерация (обход списка). Loop = цикл.

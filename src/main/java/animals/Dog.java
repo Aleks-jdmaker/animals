@@ -1,7 +1,7 @@
 package animals;
 
 public abstract class Dog extends Predator{
-    protected DogBreeds breed;
+    protected DogBreeds breed; // Поле доступно для класска Dog и его потомков.
     protected int weight;
     public Dog(String name) {
         super(name);
@@ -13,7 +13,7 @@ public abstract class Dog extends Predator{
         if (this.breed == DogBreeds.BULLDOG) greeting = "Roof";
         if (this.breed == DogBreeds.FOX_TERRIER) greeting = "Tiaf-Tiaf";
         String nameAndType = super.toString(); // Вызов родительского метода. Super - это родитель.
-        return nameAndType + " I'am a dog. " + greeting;
+        return nameAndType + " I'am a dog. My weight is " + this.weight + " " + greeting;
     }
-    abstract void setBreed(DogBreeds breed);
+    abstract void setBreed(DogBreeds breed) throws IllegalAccessException; // Метод объявлен, но нереализован.
 }

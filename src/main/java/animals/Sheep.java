@@ -7,6 +7,6 @@ public class Sheep extends Herbivore{
     @Override
     public String toString() {
         String nameAndType = super.toString(); // Вызов родительского метода. Super - это родитель.
-        return nameAndType + " I'am a sheep.";
+        return nameAndType + " I'am a sheep. Beeee"; // Можем сосредоточиться на конкретике.
     }
 }
