@@ -1,19 +1,28 @@
 package animals;
 
 public abstract class Dog extends Predator{
-    protected DogBreeds breed; // Поле доступно для класска Dog и его потомков.
-    protected int weight;
+    protected double weight;
+
+    public double getSpeed() {
+        return speed * Math.random();
+    }
+    protected double speed;
+    public double getWeight() {
+        return weight;
+    }
     public Dog(String name) {
         super(name);
     }
     @Override
     public String toString() {
         String greeting = null;
-        if (this.breed == DogBreeds.LABRADOR) greeting = "Af-Af";
+        if (this instanceof Labrador) greeting = "I am a Labrodor!";
+        else if (this instanceof Bulldog) greeting = "I am a Bulldog!";
+        else greeting = "I am a dog of unknown breed!";
+        /*if (this.breed == DogBreeds.LABRADOR) greeting = "Af-Af";
         if (this.breed == DogBreeds.BULLDOG) greeting = "Roof";
-        if (this.breed == DogBreeds.FOX_TERRIER) greeting = "Tiaf-Tiaf";
+        if (this.breed == DogBreeds.FOX_TERRIER) greeting = "Tiaf-Tiaf"; */
         String nameAndType = super.toString(); // Вызов родительского метода. Super - это родитель.
-        return nameAndType + " I'am a dog. My weight is " + this.weight + " " + greeting;
+        return nameAndType + " I'am a dog. " + greeting + " My weight is " + this.weight + " kg. ";
     }
-    abstract void setBreed(DogBreeds breed) throws IllegalAccessException; // Метод объявлен, но нереализован.
 }
