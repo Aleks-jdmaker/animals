@@ -3,12 +3,7 @@ package animals;
 public class Bulldog extends Dog{
     public Bulldog(String name) {
         super(name);
-        this.setBreed(DogBreeds.BULLDOG);
-    }
-
-    @Override
-    void setBreed(DogBreeds breed) {
-        this.breed = breed;
-        this.weight = 10;
+        this.speed = 15;
+        this.weight = 30;
     }
 }

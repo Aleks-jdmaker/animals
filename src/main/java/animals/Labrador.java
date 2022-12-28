@@ -1,14 +1,9 @@
 package animals;
 
 public class Labrador extends Dog{
-    public Labrador(String name) {
+    public Labrador(String name){
         super(name);
-        setBreed(DogBreeds.LABRADOR);
-    }
-
-    @Override
-    void setBreed(DogBreeds breed) {
-        this.breed = breed;
+        this.speed = 20;
         this.weight = 50;
     }
 }
